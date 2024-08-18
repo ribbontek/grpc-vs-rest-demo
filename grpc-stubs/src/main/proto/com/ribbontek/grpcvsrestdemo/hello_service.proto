@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.ribbontek.grpcvsrestdemo;
+
+option java_multiple_files = true;
+option java_package = "com.ribbontek.grpcvsrestdemo";
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greeting
+message HelloResponse {
+  string greeting = 1;
+}
+
+// The hello service definition.
+service HelloService {
+  // Sends a hello request
+  rpc HelloWorld(HelloRequest) returns (HelloResponse);
+}
+

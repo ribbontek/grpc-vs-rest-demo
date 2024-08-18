@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  grpcvsrestdemo_service:
+    build:
+      context: ../
+      dockerfile: dev_docker/Dockerfile.loadtest
+    ports:
+      - "8080:8080"
+      - "9898:9898"
